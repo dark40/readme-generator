@@ -6,7 +6,7 @@ This is a command-line application that dynamically generates a professional REA
 
 ## Walkthrough Video
 
-[](./Main/Walkthrough.mov)
+[Walkthrough Video](./Main/Walkthrough.mov)
 
 
 ## User Story
