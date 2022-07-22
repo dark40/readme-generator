@@ -1,6 +1,7 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const renderLicenseLink = require('./utils/generateMarkdown');
 
 // Create an array of questions for user input
 const questions = () => {
@@ -35,11 +36,13 @@ const questions = () => {
             type: 'input',
             name: 'dependency',
             message: 'What command should be run to install dependencies?',
+            default: 'npm i',
         },
         {
             type: 'input',
             name: 'test',
             message: 'What command should be run to run test?',
+            default: 'npm run test',
         },
         {
             type: 'input',
@@ -55,11 +58,11 @@ const questions = () => {
     ])
 };
 
-// TODO: Create a function to write README file
+// Create a function to write README file
 const writeToFile = ({github_name, email, project_name, description, license, dependency, test, usage, contribution}) =>
 `# ${project_name}
 
-${license}
+${renderLicenseLink(license)}
 
 ## Description
 
@@ -67,18 +70,20 @@ ${description}
 
 ## Table of Contents
 
-    * Installation
-    * Usage 
-    * License
-    * Contribution
-    * Tests
-    * Questions
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 
 To install necessary dependencies, run the following command: 
 
-${dependency}
+
+${"```\n" + dependency + "\n```"}
+
 
 ## Usage
 
@@ -86,8 +91,7 @@ ${usage}
 
 ## License
 
-This project is licensed under the ${license}.
-
+This project is licensed under the ${license} license.
 
 ## Contributing
 
@@ -97,18 +101,18 @@ ${contribution}
 
 To run tests, run the following command: 
 
-```sh
-${test}
-```
+
+${"```\n" + test + "\n```"}
+ 
 
 ## Questions 
 
-If you have any question about the repo, open an issue or contact directly at ${email}. You can find more of my work at ${github_name}.
+If you have any question about the repo, open an issue or contact directly at [${email}]. You can find more of my work at [${github_name}](https://github.com/${github_name}).
 
 `;
 
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 const init = () => {
     questions()
     .then((answer) => fs.writeFileSync('README.md',writeToFile(answer)))
