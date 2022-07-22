@@ -1,10 +1,10 @@
-# 1
+# testing 
 
-![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub](https://img.shields.io/badge/license-APACHE_2.0-blue.svg)
 
 ## Description
 
-1
+test test test 
 
 ## Table of Contents
 
@@ -21,21 +21,21 @@ To install necessary dependencies, run the following command:
 
 
 ```
-1
+npm i
 ```
 
 
 ## Usage
 
-1
+nothing more 
 
 ## License
 
-This project is licensed under the MIT license.
+This project is licensed under the APACHE 2.0 license.
 
 ## Contributing
 
-1
+nothing 
 
 ## Tests
 
@@ -43,11 +43,11 @@ To run tests, run the following command:
 
 
 ```
-1
+npm run test 
 ```
  
 
 ## Questions 
 
-If you have any question about the repo, open an issue or contact directly at 1. You can find more of my work at [1](https://github.com/1).
+If you have any question about the repo, open an issue or contact directly at d@h.com. You can find more of my work at [dark40](https://github.com/dark40).
 

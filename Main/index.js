@@ -107,7 +107,7 @@ ${"```\n" + test + "\n```"}
 
 ## Questions 
 
-If you have any question about the repo, open an issue or contact directly at [${email}]. You can find more of my work at [${github_name}](https://github.com/${github_name}).
+If you have any question about the repo, open an issue or contact directly at ${email}. You can find more of my work at [${github_name}](https://github.com/${github_name}).
 
 `;
 
